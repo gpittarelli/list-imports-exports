@@ -25,12 +25,15 @@ function parse(code) {
 
       if (path.isExportNamedDeclaration()) {
         if (node.source) {
-          var exp = node.specifiers[0].exported.name,
-          from = node.source.value;
-
+          var from = node.source.value;
           output.imports.push(from);
-          output.exports.push(exp);
-          output.passthroughs.push([exp, from]);
+
+          node.specifiers.forEach(function (spec) {
+            var orig = spec.local ? spec.local.name : 'default',
+              exp = spec.exported.name;
+            output.exports.push(exp);
+            output.passthroughs.push([exp, from, orig]);
+          });
         } else {
           output.exports = output.exports.concat(
             node.specifiers.map(function (spec) {
