@@ -11,10 +11,10 @@ Also specifically lists "passthroughs", such as `export a from './a'`.
 ## Usage example
 
 ```
-> require('list-imports-exports').parse('export a from "./a";');
+> require('list-imports-exports').parse('export a, {b as c} from "./a";');
 {
   imports: ['./a'],
-  exports: ['a'],
-  passthroughs: [['a', './a']]
+  exports: ['a', 'c'],
+  passthroughs: [['a', './a', 'default'], ['c', './b', 'b']]
 }
 ```
