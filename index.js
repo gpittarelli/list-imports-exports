@@ -8,7 +8,18 @@ function parse(code) {
     code = babylon.parse(code, {
       sourceType: 'module',
       plugins: [
-        'exportExtensions'
+        'asyncGenerators',
+        'classConstructorCall',
+        'classProperties',
+        'decorators',
+        'doExpressions',
+        'exportExtensions',
+        'flow',
+        'functionSent',
+        'functionBind',
+        'jsx',
+        'objectRestSpread',
+        'dynamicImport',
       ]
     });
   }
