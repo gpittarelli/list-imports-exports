@@ -1,6 +1,6 @@
 {
   "name": "list-imports-exports",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Lists some simple ES6 import/export stats",
   "main": "index.js",
   "repository": {
