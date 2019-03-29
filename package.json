@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/gpittarelli/list-imports-exports.git"
   },
+  "scripts": {
+    "test": "node test.js"
+  },
   "keywords": [
     "es6",
     "import",
