@@ -1,6 +1,6 @@
 {
   "name": "list-imports-exports",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Lists some simple ES6 import/export stats",
   "main": "index.js",
   "repository": {
@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/gpittarelli/list-imports-exports#readme",
   "dependencies": {
-    "babel-traverse": "6.25.0",
-    "babel-types": "6.25.0",
-    "babylon": "6.17.3"
+    "@babel/parser": "^7.0.0",
+    "@babel/traverse": "^7.0.0",
+    "@babel/types": "^7.0.0"
   }
 }
