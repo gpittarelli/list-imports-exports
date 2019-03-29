@@ -1,6 +1,6 @@
-const babylon = require('babylon');
-const traverse = require('babel-traverse').default;
-const t = require('babel-types');
+const babylon = require('@babel/parser');
+const traverse = require('@babel/traverse').default;
+const t = require('@babel/types');
 
 function parse(code) {
   // accept either pre-parsed ast or string of code
@@ -11,15 +11,16 @@ function parse(code) {
         'asyncGenerators',
         'classConstructorCall',
         'classProperties',
-        'decorators',
+        'decorators-legacy',
         'doExpressions',
+        'exportDefaultFrom',
         'exportExtensions',
         'flow',
         'functionSent',
         'functionBind',
         'jsx',
         'objectRestSpread',
-        'dynamicImport',
+        'dynamicImport'
       ]
     });
   }
