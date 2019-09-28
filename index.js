@@ -20,6 +20,7 @@ function parse(code) {
         'functionBind',
         'jsx',
         'objectRestSpread',
+        'optionalChaining',
         'dynamicImport'
       ]
     });
