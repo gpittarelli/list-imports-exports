@@ -2,7 +2,7 @@ const babylon = require('@babel/parser');
 const traverse = require('@babel/traverse').default;
 const t = require('@babel/types');
 
-function parse(code) {
+function parse(code, extraPlugins = []) {
   // accept either pre-parsed ast or string of code
   if (typeof code === 'string') {
     code = babylon.parse(code, {
@@ -16,13 +16,13 @@ function parse(code) {
         'doExpressions',
         'exportDefaultFrom',
         'exportExtensions',
-        'flow',
         'functionSent',
         'functionBind',
         'jsx',
         'objectRestSpread',
         'optionalChaining',
-        'dynamicImport'
+        'dynamicImport',
+        ...extraPlugins
       ]
     });
   }
