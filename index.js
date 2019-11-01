@@ -11,6 +11,7 @@ function parse(code) {
         'asyncGenerators',
         'classConstructorCall',
         'classProperties',
+        'nullishCoalescingOperator',
         'decorators-legacy',
         'doExpressions',
         'exportDefaultFrom',
